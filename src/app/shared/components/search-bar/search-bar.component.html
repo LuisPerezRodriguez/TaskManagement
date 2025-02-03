@@ -1,0 +1,8 @@
+<input
+  #txtSearch
+  type="text"
+  [placeholder]="placeholder"
+  [value]="value"
+  class="form-control"
+  (keyup.enter)="getValue(txtSearch.value)"
+/>

@@ -1,0 +1,11 @@
+<div class="container">
+  <h2>Pending Tasks</h2>
+  <div class="task-list">
+    <div *ngFor="let task of pendingTasks" class="task-card">
+      <h3>Task #{{ task.id }}</h3>
+      <p>{{ task.title }}</p>
+      <button (click)="viewDetails(task.id)" class="btn">View Details</button>
+    </div>
+  </div>
+</div>
+<shared-loading *ngIf="loading"></shared-loading>

@@ -1,0 +1,22 @@
+<div *ngIf="task && user">
+  <h2>Task Details</h2>
+
+  <div class="task-details">
+    <p><strong>Task ID:</strong> {{ task.id }}</p>
+    <p><strong>Title:</strong> {{ task.title }}</p>
+    <p>
+      <strong>Status:</strong> {{ task.completed ? "Completed" : "Pending" }}
+    </p>
+  </div>
+
+  <h3>Assigned User</h3>
+  <div class="user-details">
+    <p><strong>User ID:</strong> {{ user.id }}</p>
+    <p><strong>Name:</strong> {{ user.name }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Phone:</strong> {{ user.phone }}</p>
+    <p><strong>Company:</strong> {{ user.company?.name }}</p>
+  </div>
+</div>
+
+<shared-loading *ngIf="loading"></shared-loading>
